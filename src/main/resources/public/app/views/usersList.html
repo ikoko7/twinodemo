@@ -1,0 +1,27 @@
+<div class="container pad-top">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Users List</h1>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <table ng-table="vm.usersList" class="table table-main-border table-hover table-condensed table-bordered table-striped" show-filter="true">
+            <tr ng-repeat="user in $data">
+                <td title="'#'" style="width: 60px;">{{$index + 1}}</td>
+                <td title="'User Name'" filter="{ name: 'text'}" sortable="'name'">
+                    <a ng-href="#/userProfile">{{user.name}}</a>
+                </td>
+                <td title="'Cell Phone'" filter="{ phoneNumber: 'text'}" sortable="'phoneNumber'">{{user.phoneNumber}}</td>
+                <td title="'Age'" filter="{ age: 'text'}" sortable="'age'">{{user.age}}</td>
+                <td title="'Birth Date'" filter="{ birthday: 'text'}" sortable="'birthday'">{{user.birthday}}</td>
+                <td title="'Salary'" filter="{ salary: 'text'}" sortable="'salary'">{{user.salary}}</td>
+                <td title="'Liability'" filter="{ liabilities: 'text'}" sortable="'liabilities'">{{user.liabilities}}</td>
+            </tr>
+        </table>
+
+    </div>
+
+</div>

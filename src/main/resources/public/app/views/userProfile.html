@@ -1,0 +1,43 @@
+<div class="container pad-top">
+    <table class="table usertable">
+        <tr>
+            <td><h3>Details for {{vm.user.name}}</h3></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>{{vm.user.name}}</td>
+        </tr>
+        <tr>
+            <td>Phone number</td>
+            <td>{{vm.user.phoneNumber}}</td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td>{{vm.user.age}}</td>
+        </tr>
+        <tr>
+            <td>Birth Day</td>
+            <td>{{vm.user.birthday | date:'medium'}}</td>
+        </tr>
+        <tr>
+            <td>Salary</td>
+            <td>{{vm.user.salary}}</td>
+        </tr>
+        <tr>
+            <td>Liability</td>
+            <td>{{vm.user.liabilities}}</td>
+        </tr>
+        <tr>
+            <td>Active</td>
+            <td>{{vm.user.active | yesNo}}</td>
+        </tr>
+        <tr>
+            <td>Credit Limit</td>
+            <td>{{vm.user.creditLimit}}</td>
+        </tr>
+    </table>
+    <div>
+        <a class="btn btn-primary" ui-sref="editUser">Edit</a>
+    </div>
+</div>
