@@ -24,11 +24,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web
-                .ignoring()
-                .antMatchers("/assets/**");
-
-
+        web.ignoring().antMatchers("/assets/**");
         web.ignoring().antMatchers("/js/**");
         web.ignoring().antMatchers("/lib/**");
         web.ignoring().antMatchers("/views/**");
@@ -42,7 +38,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .headers().frameOptions().disable().and()
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/","/users/**","/logout","/h2/**").permitAll()
+                .antMatchers("/", "/users/**", "/logout", "/h2/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()

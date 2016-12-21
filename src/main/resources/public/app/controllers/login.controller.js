@@ -1,13 +1,12 @@
-/** User Profile Controller **/
+/** Users List Controller **/
 (function(){
     "use strict";
     angular
         .module('app')
-        .controller('UserProfileController', UserProfileController);
+        .controller('LoginController', LoginController);
 
-        UserProfileController.$inject = ['$state', 'userService'];
-        function UserProfileController($state, userService) {
-
+    LoginController.$inject = ['$state', 'NgTableParams', 'userService'];
+        function LoginController($state, NgTableParams, userService) {
             var vm = this;
             vm.user = {};
             vm.saveUser = saveUser;
@@ -21,11 +20,6 @@
                 });
             }
 
-            function saveUser(){
-                userService.saveUser($scope.user).then(function (response) {
-                    $state.go('profile');
-                });
-            }
         }
 
 })();

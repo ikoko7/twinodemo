@@ -10,16 +10,16 @@
 
             this.getUsersService = function() {
                 return $http({
-                    url : 'users/getUserList?page=0&count=10',
+                    url : 'users/getUserList?page=0&count=20',
                     method : 'GET'
                 }).then(function(response) {
                     return response.data;
                 });
             };
 
-            this.getUserProfileService = function() {
+            this.getUserProfileService = function(id) {
                 return $http({
-                    url : 'users/getProfileUser',
+                    url : 'users/getUserDetails/'+ id,
                     method : 'GET'
                 }).then(function(response) {
                     return response.data;

@@ -51,7 +51,7 @@
                             },
                             {
                                 name: 'Login',
-                                url: '/login'
+                                url: '#/login'
                             }];
                     }
 

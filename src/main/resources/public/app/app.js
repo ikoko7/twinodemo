@@ -30,6 +30,12 @@ var app = angular.module('app', [
                 controller: 'UserController',
                 controllerAs: 'vm'
             })
+            .state('login',{
+                url:'/login',
+                templateUrl: 'login.html',
+                controller: 'LoginController',
+                controllerAs: 'vm'
+            })
             .state('userProfile',{
                 url:'/userProfile',
                 templateUrl: viewsPrefix + 'userProfile.html',
